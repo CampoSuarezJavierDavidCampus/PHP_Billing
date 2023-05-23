@@ -10,6 +10,7 @@
 }
 
 .product {
+  position: relative;
   padding: 0.5rem;
   border-radius: 0.4rem;
   background: #eaeef1;
@@ -52,4 +53,42 @@
   width: 2.5rem;
   height: 2.5rem;
   padding-top: 0.2rem;
+}
+.product__message {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+.product__message[data-state=error] {
+  background: #ea6e56;
+}
+.product__message[data-state=save] {
+  background: #1f8472;
+}
+.product__message[data-show=true] {
+  animation: hidden 4s ease 0s;
+}
+
+@keyframes hidden {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=new-product.css.map */

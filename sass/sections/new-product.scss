@@ -11,6 +11,7 @@
 }
 
 .product{
+    position: relative;
     padding: .5rem;
     border-radius: .4rem;
     background: $light-gray;    
@@ -54,5 +55,48 @@
             height: 2.5rem;
             padding-top: .2rem;
         }
+    }
+
+    &__message{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        visibility: hidden;
+        &[data-state='error']{
+            background: $light-red;
+        }
+        &[data-state='save']{
+            background: $green;
+        }
+
+        &[data-show='true']{            
+            animation:hidden 4s ease 0s;
+        }
+    }    
+
+}
+
+@keyframes hidden{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    50%{
+        opacity: .5;
+    }
+
+    100%{
+        opacity: 0;    
+        visibility: hidden;    
     }
 }
