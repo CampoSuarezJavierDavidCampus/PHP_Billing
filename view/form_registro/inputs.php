@@ -1,18 +1,25 @@
+<?php
+    date_default_timezone_set('America/Bogota');
+    $date = date('Y-m-d H:i');    
+    $id = (int) date('YmdHi');
+    $id *= round(rand(1,7));    
+?>
+
 <article class='facturacion__encabezado'>                
-    <label class='encabezado__label'>
-        <span class='encabezado__label-description'>id</span>
-        <input class="encabezado__label-input" type="text" name='id'>
+    <label class='facturacion__encabezado-label'>
+        <span class='facturacion__encabezado-label-description'>N°</span>
+        <input class="facturacion__encabezado-label-input" type="text" name='id' value='<?= $id ?>' disabled>
     </label>
-    <label class='encabezado__label'>
-        <span class='encabezado__label-description'>fecha</span>
-        <input class="encabezado__label-input" type="text" name="fecha">
+    <label class='facturacion__encabezado-label'>
+        <span class='facturacion__encabezado-label-description'>fecha de creacion</span>
+        <input class="facturacion__encabezado-label-input" type="text" name="fecha" value = '<?= $date?>' disabled>
     </label>
-    <label class='encabezado__label'>
-        <span class='encabezado__label-description'>nombre</span>
-        <input class="encabezado__label-input" type="text" name='nombre'>
+    <label class='facturacion__encabezado-label'>
+        <span class='facturacion__encabezado-label-description'>nombre del cliente</span>
+        <input class="facturacion__encabezado-label-input" type="text" name='nombre' required pattern="[A-Za-z0-9]+" placeholder='Nombre'>
     </label>
-    <label class='encabezado__label'>
-        <span class='encabezado__label-description'>cc</span>
-        <input class="encabezado__label-input" type="text" name='cedula'>
+    <label class='facturacion__encabezado-label'>
+        <span class='facturacion__encabezado-label-description'>N° Documento</span>
+        <input class="facturacion__encabezado-label-input" type="text" name='cedula' require="[0-9]" placeholder='xxxxxxxxxxxx' pattern>
     </label>                              
 </article>

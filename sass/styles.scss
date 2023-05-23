@@ -1,0 +1,94 @@
+@forward 'globals';
+@forward 'util';
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--factura-gradient-body);
+    background-repeat: no-repeat;
+
+}
+
+.facturacion{
+    width: 100%;
+    
+    background: var(--factura-color-white);
+    border-radius: .04rem;
+    box-shadow: -2rem 3rem .8rem .04rem rgba($color: #7c1a1b, $alpha: 0.4);
+    &__form{        
+        min-height: 60vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__encabezado{
+        font-family: 'Rubik', sans-serif;
+        display: grid;
+        grid-auto-columns: 1fr;
+        row-gap: 1rem;
+        &-label{
+            width: var(--factura-container-md);            
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            &-description{
+                text-transform: capitalize;
+            }
+
+            &-input{                    
+                text-transform: capitalize;                
+                background: none;
+                border: none;
+                padding-block:.3rem .1rem ;
+                &:disabled{                    
+                    background: var(--factura-color-gray);
+                    padding: .4rem;
+                    box-shadow: inset .2rem .2rem .4rem .06rem ;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow:  0 2px 0 0 #000;
+                }
+            }
+        }
+    }
+
+    &__productos{
+        width: 100%;
+        &-list{
+            min-height: 10vh;            
+        }
+
+        &-add{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: .8rem;
+            border-radius: .5rem;
+            border: none;
+            background: var(--factura-color-green);
+            color: var(--factura-color-white);
+            font-size: 1rem;
+            font-weight: 500;
+            svg{
+                margin-inline: .5rem;
+            }
+            &:hover &-message{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+

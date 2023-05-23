@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include_once('view.php') ?>
+    <?php include_once('view/head.php') ?>
 </head>
 <body>
     <main>
