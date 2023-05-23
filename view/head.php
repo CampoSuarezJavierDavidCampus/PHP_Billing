@@ -5,4 +5,4 @@
 <!-- css -->
 <link rel="stylesheet" href="dist/css/styles.css">
 <!-- SCRIPTS -->
-<script src="js/main.js" type="module" defer></script>
+<script src="dist/js/main.js" type="module" defer></script>

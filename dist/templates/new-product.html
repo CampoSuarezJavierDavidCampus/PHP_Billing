@@ -1,5 +1,28 @@
-<form>
-    <input type="text" class="nombre">
-    <input type="text" class="cantidad">
-    <input type="text" class="precio">
+<form class="product">
+    <div class="product__container">
+        <label class="product__label">
+            <span class="product__label-description">Producto:</span>
+            <input class="product__label-input" type="text" name="nombre" id="nombre">
+        </label>
+        <label class="product__label">
+            <span class="product__label-description">Precio xUd:</span>
+            <input class="product__label-input" type="text" name="precio" id="precio">
+        </label>
+        <label class="product__label">
+            <span class="product__label-description">Cantidad:</span>
+            <input class="product__label-input" type="text" name="cantidad" id="cantidad">
+        </label>
+    </div>
+    <div class="product__actions">
+        <button class="product__actions-btn product__actions-btn--save" data-type="save" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+            </svg>
+        </button>
+        <button class="product__actions-btn product__actions-btn--delete" data-type="delete" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg>
+        </button>
+    </div>
 </form>

@@ -1,5 +1,6 @@
 $white:#e5e3e6;
 $gray:#d0cdc6;
+$light-gray:#eaeef1;
 $light-red:#ea6e56;
 $red: #e45f4c;
 $dark-red:#b3291c;
@@ -12,6 +13,7 @@ $colors:(
     "red":$red,
     "dark-red":$dark-red,
     "gray":$gray,
+    "light-gray":$light-gray,
     "black":$black,
     "green":$green
 );

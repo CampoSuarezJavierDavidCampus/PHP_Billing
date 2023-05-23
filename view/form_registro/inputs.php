@@ -7,7 +7,7 @@
 
 <article class='facturacion__encabezado'>                
     <label class='facturacion__encabezado-label'>
-        <span class='facturacion__encabezado-label-description'>N°</span>
+        <span class='facturacion__encabezado-label-description'>ID N°</span>
         <input class="facturacion__encabezado-label-input" type="text" name='id' value='<?= $id ?>' disabled>
     </label>
     <label class='facturacion__encabezado-label'>
@@ -20,6 +20,6 @@
     </label>
     <label class='facturacion__encabezado-label'>
         <span class='facturacion__encabezado-label-description'>N° Documento</span>
-        <input class="facturacion__encabezado-label-input" type="text" name='cedula' require="[0-9]" placeholder='xxxxxxxxxxxx' pattern>
+        <input class="facturacion__encabezado-label-input" type="text" name='cedula' require placeholder='xxxxxxxxxxxx' pattern="[0-9]+">
     </label>                              
 </article>
