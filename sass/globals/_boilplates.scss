@@ -1,0 +1,7 @@
+@forward "../util";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}

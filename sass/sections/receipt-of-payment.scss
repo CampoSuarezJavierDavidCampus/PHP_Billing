@@ -1,0 +1,85 @@
+@forward "../globals/boilplates";
+@use "../globals/vars" as *;
+
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $dark-gray;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.recibo {
+  font-family: sans-serif;
+  color: #ffffff;
+  width: map-get($container, "lg");
+  background: map-get($gradients, "receipt");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    background: $yellow;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0.5rem solid $blue;
+    &-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: map-get($fonts, "md");
+      &-mesanje {
+        font-style: normal;
+        font-size: map-get($fonts, "sm");
+      }
+    }
+    &-icon {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__informacion {
+    background: $dark-yellow;
+    width: 40%;
+    &-titulo {
+      font-size: map-get($fonts, "md");
+      text-align: center;
+    }
+    &-cuenta {
+      justify-content: start;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: map-get($fonts, "sm");
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background: #ffffff;
+    width: map-get($container, "md");
+  }
+
+  &__close {
+    position: fixed;
+    right: 5rem;
+    top: 2rem;
+    background: none;
+    border: none;
+    &:hover svg {
+      background: rgba($white, $alpha: 0.6);
+      border-radius: 0.5rem;
+    }
+    svg {
+      height: 4.5rem;
+      width: 4.5rem;
+      color: $white;
+    }
+  }
+}

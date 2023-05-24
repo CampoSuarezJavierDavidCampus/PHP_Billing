@@ -1,8 +1,10 @@
 import { RemoteDB } from "./classes/RemoteDB.js";
 import { LocalDB } from "./classes/LocalDB.js";
 import { NewProduct } from "./components/new-product.js";
+import { ReceiptOfPayment } from "./components/receipt-of-payment.js";
 
 customElements.define("new-product", NewProduct);
+customElements.define("receipt-of-payment", ReceiptOfPayment);
 
 document.querySelector("#products_add").addEventListener("click", (e) => {
   const newProduct = document.createElement("new-product");

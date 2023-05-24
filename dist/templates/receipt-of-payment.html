@@ -1,0 +1,155 @@
+<article class="recibo">
+  <button class="recibo__close">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      class="bi bi-x-square"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+      />
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+  </button>
+  <header class="recibo__container recibo__container--header">
+    <figure class="recibo__logo">
+      <img class="recibo__logo-icon" src="dist/img/logo.png" alt="logo" />
+      <figcaption>
+        <h1 class="recibo__logo-title recibo__logo-title--company">
+          <strong class="recibo__logo-title-copany">COMPANY</strong>
+          <em class="recibo__logo-title-mesanje">TAGLINE HERE</em>
+        </h1>
+      </figcaption>
+    </figure>
+
+    <div class="recibo__informacion">
+      <h2 class="recibo__informacion-titulo">INVOICE</h2>
+      <dl class="recibo__informacion-cuenta">
+        <dd class="recibo__informacion-cuenta-campo">
+          <strong class="recibo__informacion-cuenta-dato">Account No</strong>
+        </dd>
+        <dt class="recibo__informacion-cuenta-valor">
+          :<em
+            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
+          >
+            0123456789
+          </em>
+        </dt>
+        <dd class="recibo__informacion-cuenta-campo">
+          <strong class="recibo__informacion-cuenta-dato">Invoice No</strong>
+        </dd>
+        <dt class="recibo__informacion-cuenta-valor">
+          :<em
+            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
+          >
+            012345667788910
+          </em>
+        </dt>
+        <dd class="recibo__informacion-cuenta-campo">
+          <strong class="recibo__informacion-cuenta-dato">Invoice Date</strong>
+        </dd>
+        <dt class="recibo__informacion-cuenta-valor">
+          :<time
+            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
+            datetime="30-04-2045"
+          >
+            30 April 2045
+          </time>
+        </dt>
+      </dl>
+    </div>
+  </header>
+
+  <section class="recibo__container recibo__container--balance">
+    <div class="recibo__informacion recibo__informacion--balance">
+      <h2 class="recibo__titulo">BALANCE</h2>
+      <dl class="recibo__cuenta">
+        <dd class="recibo__campo">
+          <strong class="recibo__dato">Total</strong>
+        </dd>
+        <dt class="recibo__valor">
+          :<em class="recibo__dato recibo__dato--valor">0123456789</em>
+        </dt>
+        <dd class="recibo__campo">
+          <strong class="recibo__dato">Paid</strong>
+        </dd>
+        <dt class="recibo__valor">
+          :<em class="recibo__dato recibo__dato--valor">012345667788910</em>
+        </dt>
+        <dd class="recibo__campo"><strong class="recibo__dato">Due</strong></dd>
+        <dt class="recibo__valor">
+          :<time class="recibo__dato recibo__dato--valor" datetime="30-04-2045">
+            30 April 2045
+          </time>
+        </dt>
+      </dl>
+    </div>
+    <table class="tabla">
+      <thead class="tabla__header">
+        <tr class="tabla__fila tabla__fila--header">
+          <th class="tabla__columna">SL</th>
+          <th class="tabla__columna tabla__columna--description">
+            Item Description
+          </th>
+          <th class="tabla__columna tabla__columna--price">Price</th>
+          <th class="tabla__columna tabla__columna--amarilla">Qty</th>
+          <th class="tabla__columna tabla__columna--amarilla">Total</th>
+        </tr>
+      </thead>
+      <tbody class="tabla__body">
+        <tr class="tabla__fila">
+          <td class="tabla__campo tabla__campo--sl">1</td>
+          <td class="tabla__campo">Product Description</td>
+          <td class="tabla__campo">$50.00</td>
+          <td class="tabla__campo">1</td>
+          <td class="tabla__campo">$50.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="recibo__container recibo__container--footer">
+    <div class="recibo__informacion recibo__informacion--info">
+      <h1 class="recibo__titulo recibo__titulo--info">Payment info:</h1>
+      <dl class="recibo__cuenta recibo__cuenta--info">
+        <dd class="recibo__campo">
+          <strong class="recibo__dato">Account No</strong>
+        </dd>
+        <dt class="recibo__valor">
+          :<em class="recibo__dato recibo__dato--valor">0123456789</em>
+        </dt>
+        <dd class="recibo__campo">
+          <strong class="recibo__dato">Name</strong>
+        </dd>
+        <dt class="recibo__valor">
+          :<em class="recibo__dato recibo__dato--valor">Name Here</em>
+        </dt>
+        <dd class="recibo__campo">
+          <strong class="recibo__dato">Bank Details</strong>
+        </dd>
+        <dt class="recibo__valor">
+          :<em class="recibo__dato recibo__dato--valor">0123 456 789</em>
+        </dt>
+      </dl>
+    </div>
+    <div
+      class="recibo__informacion recibo__informacion--info recibo__informacion--bottom"
+    >
+      <h3 class="recibo__titulo recibo__titulo--info">Terms & Conditions:</h3>
+      <p class="recibo__cuenta recibo__cuenta--info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, qui.
+        Fugiat
+      </p>
+    </div>
+
+    <div class="recibo__informacion recibo__informacion--firma">
+      <picture class="firma">
+        <img src="dist/img/firma.png" class="firma__imagen" alt="firma" />
+      </picture>
+      <h3 class="fima__nombre">Firma</h3>
+    </div>
+  </footer>
+</article>
