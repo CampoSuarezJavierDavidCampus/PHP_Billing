@@ -1,4 +1,4 @@
-<article class="recibo">
+<section class="recibo">
   <button class="recibo__close">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,142 +14,207 @@
       />
     </svg>
   </button>
-  <header class="recibo__container recibo__container--header">
+
+  <article class="recibo__container">
     <figure class="recibo__logo">
       <img class="recibo__logo-icon" src="dist/img/logo.png" alt="logo" />
       <figcaption>
         <h1 class="recibo__logo-title recibo__logo-title--company">
-          <strong class="recibo__logo-title-copany">COMPANY</strong>
-          <em class="recibo__logo-title-mesanje">TAGLINE HERE</em>
+          <strong class="recibo__logo-title-copany">CAMPUS</strong>
+          <em class="recibo__logo-title-mesanje">{Programer Land}</em>
         </h1>
       </figcaption>
     </figure>
 
     <div class="recibo__informacion">
-      <h2 class="recibo__informacion-titulo">INVOICE</h2>
+      <h2 class="recibo__informacion-titulo">FACTURA</h2>
       <dl class="recibo__informacion-cuenta">
         <dd class="recibo__informacion-cuenta-campo">
-          <strong class="recibo__informacion-cuenta-dato">Account No</strong>
+          <strong class="recibo__informacion-cuenta-dato">ID N°</strong>
         </dd>
+        :
         <dt class="recibo__informacion-cuenta-valor">
-          :<em
-            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
-          >
-            0123456789
-          </em>
+          <em class="recibo__informacion-cuenta-dato"> 0123456789 </em>
         </dt>
         <dd class="recibo__informacion-cuenta-campo">
-          <strong class="recibo__informacion-cuenta-dato">Invoice No</strong>
+          <strong class="recibo__informacion-cuenta-dato">Fecha</strong>
         </dd>
+        :
         <dt class="recibo__informacion-cuenta-valor">
-          :<em
-            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
-          >
-            012345667788910
-          </em>
-        </dt>
-        <dd class="recibo__informacion-cuenta-campo">
-          <strong class="recibo__informacion-cuenta-dato">Invoice Date</strong>
-        </dd>
-        <dt class="recibo__informacion-cuenta-valor">
-          :<time
-            class="recibo__informacion-cuenta-dato recibo__informacion-cuenta-dato--valor"
-            datetime="30-04-2045"
-          >
+          <time class="recibo__informacion-cuenta-dato" datetime="30-04-2045">
             30 April 2045
           </time>
         </dt>
-      </dl>
-    </div>
-  </header>
-
-  <section class="recibo__container recibo__container--balance">
-    <div class="recibo__informacion recibo__informacion--balance">
-      <h2 class="recibo__titulo">BALANCE</h2>
-      <dl class="recibo__cuenta">
-        <dd class="recibo__campo">
-          <strong class="recibo__dato">Total</strong>
+        <dd class="recibo__informacion-cuenta-campo">
+          <strong class="recibo__informacion-cuenta-dato">Documento</strong>
         </dd>
-        <dt class="recibo__valor">
-          :<em class="recibo__dato recibo__dato--valor">0123456789</em>
+        :
+        <dt class="recibo__informacion-cuenta-valor">
+          <em class="recibo__informacion-cuenta-dato"> 1000225231 </em>
         </dt>
-        <dd class="recibo__campo">
-          <strong class="recibo__dato">Paid</strong>
+        <dd class="recibo__informacion-cuenta-campo">
+          <strong class="recibo__informacion-cuenta-dato">Usuario</strong>
         </dd>
-        <dt class="recibo__valor">
-          :<em class="recibo__dato recibo__dato--valor">012345667788910</em>
-        </dt>
-        <dd class="recibo__campo"><strong class="recibo__dato">Due</strong></dd>
-        <dt class="recibo__valor">
-          :<time class="recibo__dato recibo__dato--valor" datetime="30-04-2045">
-            30 April 2045
-          </time>
+        :
+        <dt
+          class="recibo__informacion-cuenta-valor recibo__informacion-cuenta-valor--user"
+        >
+          <em class="recibo__informacion-cuenta-dato">
+            Javier David Campo Suarez
+          </em>
         </dt>
       </dl>
     </div>
-    <table class="tabla">
-      <thead class="tabla__header">
-        <tr class="tabla__fila tabla__fila--header">
-          <th class="tabla__columna">SL</th>
-          <th class="tabla__columna tabla__columna--description">
-            Item Description
-          </th>
-          <th class="tabla__columna tabla__columna--price">Price</th>
-          <th class="tabla__columna tabla__columna--amarilla">Qty</th>
-          <th class="tabla__columna tabla__columna--amarilla">Total</th>
-        </tr>
-      </thead>
-      <tbody class="tabla__body">
-        <tr class="tabla__fila">
-          <td class="tabla__campo tabla__campo--sl">1</td>
-          <td class="tabla__campo">Product Description</td>
-          <td class="tabla__campo">$50.00</td>
-          <td class="tabla__campo">1</td>
-          <td class="tabla__campo">$50.00</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <footer class="recibo__container recibo__container--footer">
-    <div class="recibo__informacion recibo__informacion--info">
-      <h1 class="recibo__titulo recibo__titulo--info">Payment info:</h1>
-      <dl class="recibo__cuenta recibo__cuenta--info">
-        <dd class="recibo__campo">
-          <strong class="recibo__dato">Account No</strong>
-        </dd>
-        <dt class="recibo__valor">
-          :<em class="recibo__dato recibo__dato--valor">0123456789</em>
-        </dt>
-        <dd class="recibo__campo">
-          <strong class="recibo__dato">Name</strong>
-        </dd>
-        <dt class="recibo__valor">
-          :<em class="recibo__dato recibo__dato--valor">Name Here</em>
-        </dt>
-        <dd class="recibo__campo">
-          <strong class="recibo__dato">Bank Details</strong>
-        </dd>
-        <dt class="recibo__valor">
-          :<em class="recibo__dato recibo__dato--valor">0123 456 789</em>
-        </dt>
-      </dl>
+    <div class="recibo__table">
+      <table class="recibo__table-products">
+        <thead class="recibo__table-thead">
+          <tr class="recibo__table-row">
+            <th class="recibo__table-cell recibo__table-cell--collumn">ID</th>
+            <th class="recibo__table-cell recibo__table-cell--collumn">
+              Producto
+            </th>
+            <th class="recibo__table-cell recibo__table-cell--collumn">
+              Precio xUd
+            </th>
+            <th class="recibo__table-cell recibo__table-cell--collumn">
+              Cantidad
+            </th>
+            <th class="recibo__table-cell recibo__table-cell--collumn">
+              Total
+            </th>
+          </tr>
+        </thead>
+        <tbody class="recibo__table-body">
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+          <tr class="recibo__table-row">
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">pizza</td>
+            <td class="recibo__table-cell">4000</td>
+            <td class="recibo__table-cell">1</td>
+            <td class="recibo__table-cell">4000</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div
-      class="recibo__informacion recibo__informacion--info recibo__informacion--bottom"
-    >
-      <h3 class="recibo__titulo recibo__titulo--info">Terms & Conditions:</h3>
-      <p class="recibo__cuenta recibo__cuenta--info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, qui.
-        Fugiat
-      </p>
+    <ul class="recibo__total">
+      <li class="recibo__total-item">
+        <strong class="recibo__total-item-title">Sub Total</strong>:
+        <em class="recibo__total-item-value"
+          ><span class="total">90000</span>COP</em
+        >
+      </li>
+      <li class="recibo__total-item">
+        <strong class="recibo__total-item-title">Iva</strong>:
+        <em class="recibo__total-item-value"
+          ><span class="total">8999</span>COP</em
+        >
+      </li>
+      <li class="recibo__total-item">
+        <strong class="recibo__total-item-title">Total</strong>:
+        <em class="recibo__total-item-value"
+          ><span class="total">90000</span>COP</em
+        >
+      </li>
+    </ul>
+    <div class="recibo__politica">
+      <div class="recibo__politica-container">
+        <h4 class="recibo__politica-title">Terminos & Condiciones</h4>
+        <p class="recibo__politica-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ullam
+          officia? Officiis provident nisi quibusdam sit beatae ipsam
+          dignissimos magni? Cupiditate adipisci obcaecati hic nihil eos illum
+          eum aperiam saepe?
+        </p>
+      </div>
     </div>
-
-    <div class="recibo__informacion recibo__informacion--firma">
-      <picture class="firma">
-        <img src="dist/img/firma.png" class="firma__imagen" alt="firma" />
-      </picture>
-      <h3 class="fima__nombre">Firma</h3>
-    </div>
-  </footer>
-</article>
+    <picture class="recibo__firma">
+      <img src="dist/img/firma.png" class="recibo__firma-img" alt="firma" />
+      <figcaption>
+        <h3 class="recibo__firma-nombre">{Campus Land}</h3>
+      </figcaption>
+    </picture>
+  </article>
+</section>

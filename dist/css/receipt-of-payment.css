@@ -318,7 +318,13 @@ template {
   box-sizing: border-box;
 }
 
+em,
+strong {
+  font-style: normal;
+}
+
 :host {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
@@ -326,24 +332,52 @@ template {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 62rem;
+  height: 100%;
 }
 
 .recibo {
   font-family: sans-serif;
   color: #ffffff;
-  width: 62rem;
+  width: 48rem;
   background: linear-gradient(to bottom, #2b2b32 15%, #d2d9e3 15%, #d2d9e3 85%, #2b2b32 85%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 62rem;
+  width: 60rem;
+}
+.recibo__container {
+  display: grid;
+  grid-template-columns: repeat(12, 4rem);
+  grid-template-rows: repeat(14, 4.4285714286rem);
+  background: #ffffff;
+  width: 48rem;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+.recibo__container::before {
+  content: "";
+  background: #19283f;
+  position: absolute;
+  z-index: -10;
+  right: 0;
+  width: 20rem;
+  height: 62rem;
 }
 .recibo__logo {
+  grid-column: 1/5;
+  grid-row: 1/3;
   display: flex;
   align-items: center;
-  background: #fbb716;
-  padding: 0;
+  justify-content: space-evenly;
+  padding-block: 0;
+  padding-inline: 0.3rem;
+  background: #19283f;
   margin: 0;
-  border-bottom: 0.5rem solid #19283f;
+  border-bottom: 0.5rem solid #0fb0ac;
 }
 .recibo__logo-title {
   display: flex;
@@ -351,34 +385,143 @@ template {
   align-items: center;
   font-size: clamp(1rem, 1rem + 0.5vw, 2.5rem);
 }
+.recibo__logo-title-copany {
+  text-decoration: underline;
+}
 .recibo__logo-title-mesanje {
   font-style: normal;
   font-size: 1rem;
 }
 .recibo__logo-icon {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4.5rem;
 }
 .recibo__informacion {
-  background: #cb982b;
-  width: 40%;
-}
-.recibo__informacion-titulo {
-  font-size: clamp(1rem, 1rem + 0.5vw, 2.5rem);
-  text-align: center;
+  grid-column: 8/13;
+  grid-row: 1/4;
+  padding-inline: 0.8rem;
 }
 .recibo__informacion-cuenta {
-  justify-content: start;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.recibo__container {
+.recibo__informacion-cuenta-campo, .recibo__informacion-cuenta-valor {
+  margin: 0;
+}
+.recibo__informacion-cuenta-campo {
+  padding-inline: 0 0.2rem;
+}
+.recibo__informacion-cuenta-valor {
+  text-transform: uppercase;
+  justify-self: end;
+  width: -moz-max-content;
+  width: max-content;
+}
+.recibo__informacion-cuenta-valor--user {
+  width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recibo__balance {
+  grid-column: 9/13;
+  grid-row: 3/6;
+  background: #19283f;
+}
+.recibo__table {
+  grid-column: 1/13;
+  grid-row: 4/10;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+}
+.recibo__table-products {
+  font-size: clamp(1rem, 1rem + 0.5vw, 2.5rem);
+  text-align: center;
+  margin-inline: auto;
+  width: 95%;
+  border-collapse: collapse;
+}
+.recibo__table-thead {
+  position: sticky;
+  top: 0px;
+  background: #0fb0ac;
+}
+.recibo__table-cell {
+  padding-block: 0.5rem;
+  color: #2b2b32;
+}
+.recibo__table-cell--collumn {
+  color: #ffffff;
+}
+.recibo__table-row {
+  text-transform: capitalize;
+}
+.recibo__table-row > :nth-child(4), .recibo__table-row > :last-child {
+  color: #eaeef1;
+}
+.recibo__total {
+  grid-column: 8/13;
+  grid-row: 10/12;
+  list-style: none;
+  font-size: clamp(1rem, 1rem + 0.5vw, 2.5rem);
+  margin: 0;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+}
+.recibo__total-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+}
+.recibo__total-item-title, .recibo__total-item-value {
+  width: -moz-max-content;
+  width: max-content;
+}
+.recibo__total-item-title {
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-padding-end: 0.2rem;
+          padding-inline-end: 0.2rem;
+}
+.recibo__total-item-value {
+  justify-self: end;
+}
+.recibo__politica {
+  grid-column: 1/8;
+  grid-row: 12/15;
+  background: #eaeef1;
+}
+.recibo__politica-container {
+  width: 75%;
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
+  -webkit-padding-before: 1.5rem;
+          padding-block-start: 1.5rem;
+}
+.recibo__politica-title {
+  font-size: clamp(1rem, 1rem + 0.5vw, 2.5rem);
+  background: #0fb0ac;
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+}
+.recibo__politica-description {
+  margin-top: 0.8rem;
+  padding: 0.4rem 0.5rem;
+  background: #dedfe3;
+  color: #19283f;
+}
+.recibo__firma {
+  grid-column: 8/13;
+  grid-row: 12/15;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  background: #ffffff;
-  width: 48rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.recibo__firma-img {
+  height: 5rem;
+  width: 5rem;
 }
 .recibo__close {
   position: fixed;
