@@ -1,5 +1,5 @@
 export class RemoteDB {
-  #_URL = "scripts/db.php";
+  #_URL = "scripts/productos.php";
   #_CONFIG = {
     method: "POST",
   };
