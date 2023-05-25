@@ -1,5 +1,5 @@
 export class RemoteDB {
-  #_URL = "scripts/productos.php";
+  #_URL = "scripts/ajax.php";
   #_CONFIG = {
     method: "POST",
   };
