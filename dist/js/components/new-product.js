@@ -50,7 +50,7 @@ export class NewProduct extends HTMLElement {
         id: this.id,
         nombre,
         precio,
-        cantidad
+        cantidad,
       });
     }
   }
@@ -74,7 +74,7 @@ export class NewProduct extends HTMLElement {
       precio == "" ||
       isNaN(parseFloat(precio)) ||
       cantidad == "" ||
-      isNaN(parseInt(precio)) ||
+      isNaN(parseInt(cantidad)) ||
       nombre == ""
     ) {
       return { error: "DATOS NO VALIDOS" };
