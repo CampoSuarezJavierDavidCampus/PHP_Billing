@@ -7,10 +7,8 @@ export class RemoteDB {
     this.#_CONFIG.body = data;
   }
 
-  async peticion() {
-    console.log(this.#_CONFIG);
-    const RESPONSE = await (await fetch(this.#_URL, this.#_CONFIG)).text();
-    console.log(RESPONSE);
+  async peticion() {    
+    const RESPONSE = await (await fetch(this.#_URL, this.#_CONFIG)).json();    
     return RESPONSE;
   }
 }

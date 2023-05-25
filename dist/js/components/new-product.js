@@ -50,7 +50,7 @@ export class NewProduct extends HTMLElement {
         id: this.id,
         nombre,
         precio,
-        cantidad,
+        cantidad
       });
     }
   }

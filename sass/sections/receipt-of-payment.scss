@@ -104,6 +104,7 @@ strong {
         justify-self: end;
         width: max-content;
         &--user {
+          text-align: end;
           width: 10rem;
           white-space: nowrap;
           overflow: hidden;

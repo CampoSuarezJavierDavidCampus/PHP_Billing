@@ -418,6 +418,7 @@ strong {
   width: max-content;
 }
 .recibo__informacion-cuenta-valor--user {
+  text-align: end;
   width: 10rem;
   white-space: nowrap;
   overflow: hidden;

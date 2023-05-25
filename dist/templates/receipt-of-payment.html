@@ -41,7 +41,7 @@
         </dd>
         :
         <dt class="recibo__informacion-cuenta-valor">
-          <time class="recibo__informacion-cuenta-dato" datetime="30-04-2045">
+          <time class="recibo__informacion-cuenta-dato" id='fecha' datetime="30-04-2045">
             30 April 2045
           </time>
         </dt>
@@ -50,7 +50,7 @@
         </dd>
         :
         <dt class="recibo__informacion-cuenta-valor">
-          <em class="recibo__informacion-cuenta-dato"> 1000225231 </em>
+          <em class="recibo__informacion-cuenta-dato" id='documento' > 1000225231 </em>
         </dt>
         <dd class="recibo__informacion-cuenta-campo">
           <strong class="recibo__informacion-cuenta-dato">Usuario</strong>
@@ -59,7 +59,7 @@
         <dt
           class="recibo__informacion-cuenta-valor recibo__informacion-cuenta-valor--user"
         >
-          <em class="recibo__informacion-cuenta-dato">
+          <em class="recibo__informacion-cuenta-dato" id='cliente'>
             Javier David Campo Suarez
           </em>
         </dt>
@@ -181,21 +181,21 @@
     </div>
     <ul class="recibo__total">
       <li class="recibo__total-item">
-        <strong class="recibo__total-item-title">Sub Total</strong>:
+        <strong class="recibo__total-item-title" >Sub Total</strong>:
         <em class="recibo__total-item-value"
-          ><span class="total">90000</span>COP</em
+          ><span class="total" id='subtotal'>90000</span>COP</em
         >
       </li>
       <li class="recibo__total-item">
-        <strong class="recibo__total-item-title">Iva</strong>:
+        <strong class="recibo__total-item-title" >Iva</strong>:
         <em class="recibo__total-item-value"
-          ><span class="total">8999</span>COP</em
+          ><span class="total" id='iva'>8999</span>COP</em
         >
       </li>
       <li class="recibo__total-item">
-        <strong class="recibo__total-item-title">Total</strong>:
+        <strong class="recibo__total-item-title" >Total</strong>:
         <em class="recibo__total-item-value"
-          ><span class="total">90000</span>COP</em
+          ><span class="total" id='total'>90000</span>COP</em
         >
       </li>
     </ul>

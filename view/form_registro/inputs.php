@@ -16,10 +16,10 @@
     </label>
     <label class='facturacion__encabezado-label'>
         <span class='facturacion__encabezado-label-description'>nombre del cliente</span>
-        <input class="facturacion__encabezado-label-input" type="text" name='nombre' required pattern="[A-Za-z0-9]+" placeholder='Nombre'>
+        <input class="facturacion__encabezado-label-input" type="text" name='cliente' required placeholder='Nombre'>
     </label>
     <label class='facturacion__encabezado-label'>
         <span class='facturacion__encabezado-label-description'>N° Documento</span>
-        <input class="facturacion__encabezado-label-input" type="text" name='cedula' require placeholder='xxxxxxxxxxxx' pattern="[0-9]+">
+        <input class="facturacion__encabezado-label-input" type="text" name='documento' require placeholder='xxxxxxxxxxxx' pattern="[0-9]+">
     </label>                              
 </article>
