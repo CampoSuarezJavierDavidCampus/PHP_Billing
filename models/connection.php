@@ -1,6 +1,9 @@
 <?php
-require_once('config.php');
-class Connection extends Config{
+namespace App\Connection;
+use 
+    PDO,
+    App\Config\Setting;
+class MySQL extends Setting{
     private string $_SQL;
     private $_DATA;
     public function __construct($sql,$data){
